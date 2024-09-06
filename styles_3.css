@@ -1,0 +1,67 @@
+/* General styling for the form container */
+.upload-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for form labels */
+.upload-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Styling for form inputs and textarea */
+.upload-form input[type="text"],
+.upload-form textarea,
+.upload-form select,
+.upload-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styling for textarea */
+.upload-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Styling for form buttons */
+.upload-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.upload-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Add some spacing between the elements */
+.upload-form .form-group {
+    margin-bottom: 20px;
+}
+
+/* Optional: Add styling for form error messages */
+.upload-form .error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
