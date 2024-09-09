@@ -36,13 +36,42 @@
             text-align: center;
             font-size: medium;
         }
+        .game-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+.game-item {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+    @media (max-width:768px){
+        .game-item{
+            flex:1 1 100%;
+        }
+    }
+
+
     </style>
 </head>
 <body>
     <div class="container">
         <h1>PLAY  GAMES</h1>
         <p>Enjoy these educational games while using the CBC e-learning platform.</p>
-        <iframe src="https://example.com/game"></iframe>
+
     </div>
+    <div class="game-list">
+    <div class="game-item">
+        <h2>Critical Thinking Challenge</h2>
+        <iframe src="https://www.puzzleprime.com/logic/logic-puzzles/" width="800" height="600" allowfullscreen></iframe>
+
+    </div>
+    <div class="game-item">
+        <h2>Math Quest</h2>
+        
+        <iframe src="https://phet.colorado.edu/sims/html/arithmetic/latest/arithmetic_en.html" width="800" height="600" allowfullscreen></iframe> 
+</div>
+
 </body>
 </html>

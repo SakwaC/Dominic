@@ -58,8 +58,8 @@
                 <li><a href="#videos">Videos</a></li>
                 <li><a href="#contact">Contact Us</a></li>
                 <li><a href="#feedback">feedback</a></li>
-                <li><a href="Games">Games</a></li>
-                <li><a href="About">About</a></li>
+                <li><a href="game">Games</a></li>
+                <li><a href="about">About</a></li>
             </ul>
         </nav>
     </header>
@@ -99,13 +99,16 @@
     </div>
 
     <section id="videos" class="videos-section">
-        <h2>Featured Videos</h2>
-        <div class="video-player">
-            <video controls>
-                <source src="path_to_video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+    <h2>Featured Video</h2>
+    <videos controls>    </videos>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zEf3hInFl-k?si=2YHCwzMuUN05vCbL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <p>
+        <a href="https://www.youtube.com/@CBCACADEMY-q4g/6b6081dd" target="_blank">Visit Our YouTube Channel</a>
+        </videos>
+        
+    </p>
+    </div>
     </section>
 
     <footer id="contact">
