@@ -10,9 +10,13 @@ if (isset($_GET['query'])) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // SQL query to search the uploads by title or category
-    $sql = "SELECT * FROM uploads WHERE title LIKE '%$query%' OR category LIKE '%$query%'";
-    $result = $conn->query($sql);
+      //  prepared statements to prevent SQL injection
+      $stmt = $conn->prepare("SELECT * FROM uploads WHERE title LIKE ? OR category LIKE ?");
+      $searchTerm = "%$query%";
+      $stmt->bind_param('ss', $searchTerm, $searchTerm);
+  
+      $stmt->execute();
+      $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
         echo "<h2>Search Results for '$query'</h2>";
