@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database connection
     
-    $conn = new mysqli('localhost', 'username', 'password', 'cbc');
+    $conn = new mysqli('localhost', 'root', '', 'cbc');
 
     // Check connection
     if ($conn->connect_error) {
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // SQL to insert new record
-    $sql = "INSERT INTO register (username, email, password) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
 
     // Prepare and bind
     $stmt = $conn->prepare($sql);

@@ -10,38 +10,31 @@ if (isset($_GET['query'])) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // SQL query to search the uploads by title or category
-    $sql = "SELECT * FROM uploads WHERE title LIKE '%$query%' OR category LIKE '%$query%'";
-    $result = $conn->query($sql);
+    // Use prepared statements to prevent SQL injection
+    $stmt = $conn->prepare("SELECT * FROM uploads WHERE title LIKE ? OR category LIKE ?");
+    $searchTerm = "%" . $query . "%"; // Add wildcards for LIKE operator
+    $stmt->bind_param("ss", $searchTerm, $searchTerm);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        echo "<h2>Search Results for '$query'</h2>";
+        echo "<h2>Search Results for '" . htmlspecialchars($query) . "'</h2>";
         
         // Loop through the results and display the links
         while ($row = $result->fetch_assoc()) {
-            echo "<p><a href='upload.php?id=" . $row['id'] . "'>" . $row['title'] . "</a></p>";
+            // Link directly to the file path
+            echo "<p><a href='" . htmlspecialchars($row['file_path']) . "' target='_blank'>" . htmlspecialchars($row['title']) . "</a></p>";
         }
-
+    
     } else {
-        echo "<p>No results found for '$query'.</p>";
+        echo "<p>No results found for '" . htmlspecialchars($query) . "'.</p>";
     }
+    
 
+    // Close statement and connection
+    $stmt->close();
     $conn->close();
 } else {
     echo "No search query provided.";
 }
-
-// Ensure this part of the code does not cause warnings
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    // Handle logic for when 'id' is available (if needed)
-    echo "ID is: " . $id;
-} else {
-    // Only include this block if 'id' is expected in some contexts
-    // Otherwise, you can remove or comment it out
-    echo "ID is not set";
-}
 ?>
-
-
-

@@ -14,7 +14,7 @@ $max_attempts = 3; // Max failed attempts before showing "forgot password" optio
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     // Database connection
-    $conn = new mysqli('localhost', 'username', 'password', 'cbc');
+    $conn = new mysqli('localhost', 'root', '', 'cbc');
 
     // Check connection
     if ($conn->connect_error) {
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     $password = htmlspecialchars($_POST['password']);
 
     // SQL to check the credentials
-    $sql = "SELECT * FROM register WHERE username = ?";
+    $sql = "SELECT * FROM users WHERE username = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['reset_password'])) {
     $new_password = password_hash($_POST['new_password'], PASSWORD_BCRYPT);
 
     // SQL to update the password
-    $sql = "UPDATE register SET password = ? WHERE username = ?";
+    $sql = "UPDATE users SET password = ? WHERE username = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $new_password, $username);
     

@@ -1,15 +1,8 @@
 <?php
 // Database connection
-$cbc = new mysqli('localhost', 'root', '', 'cbc');
-
-// Check connection
-if ($cbc->connect_error) {
-    die("Connection failed: " . $cbc->connect_error);
-}
-// Database connection
 $servername = "localhost";
-$username = "username";
-$password = "password";
+$username = "root";
+$password = "";
 $dbname = "cbc";
 
 // Create connection
@@ -21,9 +14,15 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-    $category = $_POST['category'];
+    // Check if required fields are set and not empty
+    if (empty($_POST['title']) || empty($_POST['description']) || empty($_POST['category']) || !isset($_FILES['file'])) {
+        echo "Please fill in all the required fields.";
+        exit;
+    }
+
+    $title = htmlspecialchars($_POST['title']);
+    $description = htmlspecialchars($_POST['description']);
+    $category = htmlspecialchars($_POST['category']);
 
     // Handle file upload
     $target_dir = "uploads/";
@@ -74,5 +73,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 // Close the database connection
 $conn->close();
-
-
+?>
