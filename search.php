@@ -10,12 +10,13 @@ if (isset($_GET['query'])) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Use prepared statements to prevent SQL injection
-    $stmt = $conn->prepare("SELECT * FROM uploads WHERE title LIKE ? OR category LIKE ?");
-    $searchTerm = "%" . $query . "%"; // Add wildcards for LIKE operator
-    $stmt->bind_param("ss", $searchTerm, $searchTerm);
-    $stmt->execute();
-    $result = $stmt->get_result();
+      //  prepared statements to prevent SQL injection
+      $stmt = $conn->prepare("SELECT * FROM uploads WHERE title LIKE ? OR category LIKE ?");
+      $searchTerm = "%$query%";
+      $stmt->bind_param('ss', $searchTerm, $searchTerm);
+  
+      $stmt->execute();
+      $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
         echo "<h2>Search Results for '" . htmlspecialchars($query) . "'</h2>";
