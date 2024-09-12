@@ -124,12 +124,12 @@
     <section id="categories" class="categories-section">
         <h2>Browse Categories</h2>
         <div class="categories-grid">
-            <div class="category-item" onclick="openModal('Pre-primary')"><a href="#">Pre-primary</a></div>
+            <div class="category-item" onclick="openModal('Pre_primary')"><a href="#">Pre-primary</a></div>
             <div class="category-item" onclick="openModal('Primary')"><a href="#">Primary</a></div>
-            <div class="category-item" onclick="openModal('Junior Secondary')"><a href="#">Junior Secondary</a></div>
+            <div class="category-item" onclick="openModal('Junior_secondary')"><a href="#">Junior Secondary</a></div>
             <div class="category-item" onclick="openModal('Secondary')"><a href="#">Secondary</a></div>
-            <div class="category-item" onclick="openModal('Schemes of Work')"><a href="#">Schemes of Work</a></div>
-            <div class="category-item" onclick="openModal('College/Institution')"><a href="#">College/Institution</a></div>
+            <div class="category-item" onclick="openModal('Schemes_of_work')"><a href="#">Schemes of Work</a></div>
+            <div class="category-item" onclick="openModal('College')"><a href="#">College/Institution</a></div>
         </div>
 
     </section>

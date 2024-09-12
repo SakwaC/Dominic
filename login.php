@@ -6,7 +6,7 @@ session_start(); // Start the session
 
 // Track login attempts
 if (!isset($_SESSION['login_attempts'])) {
-    $_SESSION['login_attempts'] = 0;
+    $_SESSION['login_attempts'] = 1;
 }
 
 $error_message = ""; // Initialize error message
