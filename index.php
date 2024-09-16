@@ -2,12 +2,12 @@
 session_start(); // Start the session
 
 // Debugging: Check session variables
-echo '<pre>';
-var_dump($_SESSION);
-echo '</pre>';
+// echo '<pre>';
+// var_dump($_SESSION);
+// echo '</pre>';
 
 // Check if the user is logged in
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {git
     // Redirect to the login page if not logged in
     header("Location: login.php");
     exit;

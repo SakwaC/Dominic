@@ -6,7 +6,7 @@ session_start(); // Start the session
 
 // Track login attempts
 if (!isset($_SESSION['login_attempts'])) {
-    $_SESSION['login_attempts'] = 1;
+    $_SESSION['login_attempts'] = 0; // Initialize with 0 attempts
 }
 
 $error_message = ""; // Initialize error message
@@ -21,58 +21,65 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Get input values
-    $username = htmlspecialchars($_POST['username']);
-    $password = htmlspecialchars($_POST['password']);
+    // Get input values and sanitize them
+    $username = htmlspecialchars(trim($_POST['username']));
+    $password = htmlspecialchars(trim($_POST['password']));
 
-    // SQL to check the credentials
-    $sql = "SELECT * FROM users WHERE username = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
 
-    if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
+    // Check if username or password is empty
+    if (empty($username) || empty($password)) {
+        $error_message = "Username and password are required.";
+    } else {
+        // SQL to check the credentials
+        $sql = "SELECT * FROM users WHERE username = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-        // Verify password
-        if (password_verify($password, $user['password'])) {
-            // Credentials are correct, create a session
-            $_SESSION['username'] = $username;
-            $_SESSION['loggedin'] = true;
-            $_SESSION['login_attempts'] = 0; // Reset login attempts after successful login
+        if ($result->num_rows > 0) {
+            $user = $result->fetch_assoc();
 
-            // Redirect to the index page
-            header("Location: index.php");
-            exit;
+            // Verify password
+            if (password_verify($password, $user['password'])) {
+                // Credentials are correct, create a session
+                $_SESSION['username'] = $user['username'];
+                $_SESSION['loggedin'] = true;
+                $_SESSION['login_attempts'] = 0; // Reset login attempts after successful login
+
+                // Redirect to the index page
+                header("Location: index.php");
+                exit;
+            } else {
+                // Password is incorrect, increment login attempts
+                $_SESSION['login_attempts']++;
+                $error_message = "Invalid username or password.";
+            }
         } else {
-            // Password is incorrect, increment login attempts
+            // Username doesn't exist
             $_SESSION['login_attempts']++;
             $error_message = "Invalid username or password.";
         }
-    } else {
-        // Username doesn't exist
-        $_SESSION['login_attempts']++;
-        $error_message = "Invalid username or password.";
+
+        // Close connections
+        $stmt->close();
+        $conn->close();
     }
 
-    // Close connections
-    $stmt->close();
-    $conn->close();
 }
 
 // Handle the password reset form
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['reset_password'])) {
     // Database connection
-    $conn = new mysqli('localhost', 'username', 'password', 'cbc');
+    $conn = new mysqli('localhost', 'root', '', 'cbc'); // Correct the DB credentials if needed
 
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $username = htmlspecialchars($_POST['username']);
-    $new_password = password_hash($_POST['new_password'], PASSWORD_BCRYPT);
+    $username = htmlspecialchars(trim($_POST['username']));
+    $new_password = password_hash($_POST['new_password'], PASSWORD_DEFAULT);
 
     // SQL to update the password
     $sql = "UPDATE users SET password = ? WHERE username = ?";
