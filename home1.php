@@ -100,9 +100,9 @@
                 <li><a href="#categories">Categories</a></li>
                 <li><a href="#videos">Videos</a></li>
                 <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#feedback">feedback</a></li>
-                <li><a href="game">Games</a></li>
-                <li><a href="about">About</a></li>
+                <li><a href="feedback.php">feedback</a></li>
+                <li><a href="game.php">Games</a></li>
+                <li><a href="about.php">About</a></li>
             </ul>
         </nav>
     </header>

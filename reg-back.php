@@ -1,7 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database connection
-    
     $conn = new mysqli('localhost', 'root', '', 'cbc');
 
     // Check connection
@@ -26,7 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute the statement
     if ($stmt->execute()) {
-        echo "Registration successful!";
+        echo "<script>
+                alert('Registration successful!');
+                window.location.href = 'login.php'; 
+              </script>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -35,3 +37,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
     $conn->close();
 }
+?>
