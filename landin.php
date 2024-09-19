@@ -76,7 +76,7 @@
     <div class="container">
         <h1>Welcome to CBC ACADEMY</h1>
         <p>Please register or log in to access our e-learning resources.</p>
-        <a href="registration.php" class="button">Register</a>
+        <a href="registration.php" class="button">Sign up</a>
         <a href="login.php" class="button">Log In</a>
     </div>
 
@@ -103,4 +103,3 @@
     </script>
 </body>
 </html>
-

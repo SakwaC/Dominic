@@ -71,7 +71,7 @@
         <p>Give the best and empower every learner to reach their full potential.</p>
 
         <h2>Exams Papers:</h2>
-        <p>Exams papers will be added after every 5 days for all sectors.</p>
+        <p>Exams papers will be added after every 5 days for all sections.</p>
 
         <h2>Feedback:</h2>
         <p>We value your feedback so much. Thank you.</p>

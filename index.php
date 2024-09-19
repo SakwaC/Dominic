@@ -1,11 +1,6 @@
 <?php
 session_start(); // Start the session
 
-// Debugging: Check session variables
-// echo '<pre>';
-var_dump($_SESSION);
-// echo '</pre>';
-
 // Check if the user is logged in
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     // Redirect to the login page if not logged in
@@ -17,7 +12,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Learning Resources</title>
     <link rel="stylesheet" href="styles.css">
@@ -38,7 +32,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
     <section id="payment">
         <h2>Access Premium Content</h2>
-        <h2>ONE WEEK-KSH 200,ONE MONTH-KSH 400,ONE YEAR-KSH2000</h2>
+        <h2>ONE WEEK - KSH 200, ONE MONTH - KSH 400, ONE YEAR - KSH 2000</h2>
         <form action="payment.php" method="POST">
             <label for="phone">Enter your phone number:</label>
             <input type="text" id="phone" name="phone" required>
@@ -47,7 +41,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     </section>
 
     <footer>
-        <p>&copy; 2024 latest E-Learning Resources</p>
+        <p>&copy; 2024 Latest E-Learning Resources</p>
     </footer>
 </body>
 </html>
