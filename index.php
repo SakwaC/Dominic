@@ -24,7 +24,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <section id="resources">
         <h2>Available Books</h2>
         <ul>
-            <li><a href="book1.html">Book 1</a></li>
+            <li><a href="uploads/budget.drawio.pdf">Book 1</a></li>
             <li><a href="book2.html">Book 2</a></li>
             <li><a href="book3.html">Book 3</a></li>
         </ul>
