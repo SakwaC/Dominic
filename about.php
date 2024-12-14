@@ -77,6 +77,7 @@
         <p>We value your feedback so much. Thank you.</p>
         
         <div class="footer">
+            Tell no:0757800663
             <p>&copy; 2024 CBC E-Learning Platform</p>
         </div>
     </div>

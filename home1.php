@@ -158,6 +158,7 @@
 
     <footer id="contact">
         <p>Contact Us: <a href="mailto:cbcacademy20@gmail.com">cbcacademy20@gmail.com</a></p>
+        Tell No:0757800663
         <p>&copy; 2024 CBC ACADEMY. All rights reserved.</p>
     </footer>
 

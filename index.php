@@ -35,13 +35,23 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <a href="book8.html">Book 9</a>
         <a href="book8.html">Book 10</a>
         <a href="book8.html">Book 11</a>
+        <a href="book8.html">Book 12</a>
+        <a href="book8.html">Book 13</a>
+        <a href="book8.html">Book 14</a>
     </div>
 </section>
 
 
 <section id="payment">
     <h2>Access Premium Content</h2>
-    <h2>ONE WEEK - KSH 200, ONE MONTH - KSH 400, ONE YEAR - KSH 2000</h2>
+    <div class="pricing-info">
+        <p>Choose your subscription plan:</p>
+        <ul>
+            <li><strong>ONE WEEK:</strong> KSH 200</li>
+            <li><strong>ONE MONTH:</strong> KSH 400</li>
+            <li><strong>ONE YEAR:</strong> KSH 2000</li>
+        </ul>
+    </div>
     
     <div class="till-info">
         <p><strong>TILL NUMBER:</strong></p>
