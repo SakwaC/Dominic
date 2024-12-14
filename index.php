@@ -22,13 +22,22 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     </header>
 
     <section id="resources">
-        <h2>Available Books</h2>
-        <ul>
-            <li><a href="uploads/budget.drawio.pdf">Book 1</a></li>
-            <li><a href="book2.html">Book 2</a></li>
-            <li><a href="book3.html">Book 3</a></li>
-        </ul>
-    </section>
+    <h2>Available Materials</h2>
+    <div class="books-grid">
+        <a href="uploads/budget.drawio.pdf">Book 1</a>
+        <a href="book2.html">Book 2</a>
+        <a href="book3.html">Book 3</a>
+        <a href="book4.html">Book 4</a>
+        <a href="book5.html">Book 5</a>
+        <a href="book6.html">Book 6</a>
+        <a href="book7.html">Book 7</a>
+        <a href="book8.html">Book 8</a>
+        <a href="book8.html">Book 9</a>
+        <a href="book8.html">Book 10</a>
+        <a href="book8.html">Book 11</a>
+    </div>
+</section>
+
 
     <section id="payment">
         <h2>Access Premium Content</h2>

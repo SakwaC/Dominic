@@ -1,74 +1,105 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
 section {
     padding: 20px;
     margin: 20px;
-    background-color: #f4f4f4;
+    background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     color: #333;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Resources Section */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
 }
 
-ul li {
-    margin: 10px 0;
-}
-
-ul li a {
+.books-grid a {
     text-decoration: none;
-    color: #0066cc;
+    color: #0073e6;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.1em;
 }
 
-ul li a:hover {
-    text-decoration: underline;
+.books-grid a:hover,
+.books-grid a:focus {
+    background-color: #0056b3;
+    color: white;
+    outline: 2px solid #ffcc00; /* Outline for better visibility on focus */
 }
 
+/* Payment Section */
 form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-label, input, button {
-    margin: 5px 0;
+label {
+    margin: 10px 0 5px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 300px;
 }
 
 button {
-    padding: 10px;
-    background-color: #0066cc;
+    padding: 10px 20px;
+    background-color: #0073e6;
     color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #004080;
+    background-color: #0056b3;
 }
 
+/* Footer Styles */
 footer {
     text-align: center;
-    padding: 0px 0;
+    padding: 10px 0;
     background-color: #333;
     color: #fff;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
