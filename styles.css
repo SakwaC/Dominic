@@ -68,29 +68,45 @@ form {
 }
 
 label {
-    margin: 10px 0 5px;
+    display: block; /* Make label block for better layout */
+    margin: 10px 0 5px; /* Space between label and input */
 }
 
 input[type="text"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 300px;
+    width: 100%; /* Full width input */
+    padding: 10px; /* Padding for comfort */
+    margin-bottom: 10px; /* Space below input */
+    border: 1px solid #ccc; /* Border for input */
+    border-radius: 4px; /* Rounded corners */
 }
 
 button {
     padding: 10px 20px;
-    background-color: #0073e6;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #0073e6; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Till Info Styles */
+.till-info {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 1px solid #ccc; /* Border for definition */
+    padding: 10px; /* Padding for spacing */
+    margin: 20px 0; /* Margin for spacing from other elements */
+    text-align: center; /* Center the text */
+}
+
+.till-number {
+    font-size: 24px; /* Larger font size for emphasis */
+    font-weight: bold; /* Bold text for importance */
+    color: #007BFF; /* Color to make it stand out */
 }
 
 /* Footer Styles */

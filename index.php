@@ -39,18 +39,20 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 </section>
 
 
-    <section id="payment">
-        <h2>Access Premium Content</h2>
-        <h2>ONE WEEK - KSH 200, ONE MONTH - KSH 400, ONE YEAR - KSH 2000</h2>
-        <form action="payment.php" method="POST">
-            <label for="phone">Enter your phone number:</label>
-            <input type="text" id="phone" name="phone" required>
-            <button type="submit">Pay and Access</button>
-        </form>
-    </section>
+<section id="payment">
+    <h2>Access Premium Content</h2>
+    <h2>ONE WEEK - KSH 200, ONE MONTH - KSH 400, ONE YEAR - KSH 2000</h2>
+    
+    <div class="till-info">
+        <p><strong>TILL NUMBER:</strong></p>
+        <div class="till-number">4955238</div>
+    </div>
+    
+    <form action="payment.php" method="POST">
+        <button type="submit">Pay and Access</button>
+    </form>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Latest E-Learning Resources</p>
-    </footer>
-</body>
-</html>
+<footer>
+    <p>&copy; 2024 Latest E-Learning Resources</p>
+</footer>
