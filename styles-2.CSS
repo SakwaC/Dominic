@@ -22,19 +22,21 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center;  /* Centers the navigation links */
     margin: 0;
+    width: 100%;  /* Ensure the navigation bar takes the full width */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px; /* Adjusted margin to reduce the space between links */
 }
 
 nav ul li a {
-    color: white;
+    color: yellow; 
     text-decoration: none;
     font-weight: bold;
 }
+
 
 .hero-section {
     background: url('path_to_background_image.jpg') no-repeat center center/cover;

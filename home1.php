@@ -7,105 +7,150 @@
     <title>CBC E-learning</title>
     <link rel="stylesheet" href="styles-2.CSS">
     <style>
-    /* Modal overlay to dim the background */
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stays in place */
-        z-index: 1000; /* On top of all content */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-    }
+  /* Modal overlay to dim the background */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stays in place */
+    z-index: 1000; /* On top of all content */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  }
 
-    /* Modal content to float on the page */
-    .modal-content {
-        background-color: #fff;
-        margin: auto;
-        padding: 20px;
-        border-radius: 8px;
-        width: 80%;
-        max-width: 600px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for floating effect */
-    }
+  /* Modal content to float on the page */
+  .modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for floating effect */
+  }
 
-    /* Close button */
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-    }
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
 
-    .close:hover, .close:focus {
-        color: black;
-        text-decoration: none;
-    }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+  }
 
-    /* Document preview grid inside modal */
-    .document-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
+  /* Document preview grid inside modal */
+  .document-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
-    .document-card {
-        display: inline-block;
-        margin: 10px;
-        padding: 10px;
-        width: 150px;
-        text-align: center;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: transform 0.2s ease;
-    }
+  .document-card {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
 
-    .document-card:hover {
-        transform: scale(1.05);
-    }
+  .document-card:hover {
+    transform: scale(1.05);
+  }
 
-    .document-card img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        margin-bottom: 10px;
-    }
+  .document-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
 
-    .document-card p {
-        font-size: 14px;
-        font-weight: bold;
-        color: #333;
-    }
+  .document-card p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px; /* Increased horizontal padding */
+  background-color: #4CAF50;
+  flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: yellow;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logout-btn {
+  margin-left: auto; /* Push the logout button to the far right */
+}
+
+.logout-btn a {
+  white-space: nowrap; /* Prevent text from wrapping */
+  background-color: black;
+  color: white;
+  text-decoration: underline;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.logout-btn a:hover {
+  background-color: #333;
+}
 </style>
-
-
 </head>
-
 <body>
-    <header>
-        <div class="logo">
-            <h1>CBC ACADEMY</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#videos">Videos</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="feedback.php">feedback</a></li>
-                <li><a href="game.php">Games</a></li>
-                <li><a href="about.php">About</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <h1>CBC ACADEMY</h1>
+    </div>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="feedback.php">Feedback</a></li>
+        <li><a href="game.php">Games</a></li>
+        <li><a href="about.php">About</a></li>
+      </ul>
+      <div class="logout-btn">
+        <a href="landin.php">Log Out</a>
+      </div>
+    </nav>
+  </header>
+</body>
+  
+
     <div class="img-logo">
         <img src="logo.jpg" alt="cbc" width="400px" height="250px">
     </div>
