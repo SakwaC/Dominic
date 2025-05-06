@@ -129,27 +129,23 @@
 </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <h1>CBC ACADEMY</h1>
-    </div>
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#categories">Categories</a></li>
-        <li><a href="#videos">Videos</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-        <li><a href="feedback.php">Feedback</a></li>
-        <li><a href="game.php">Games</a></li>
-        <li><a href="about.php">About</a></li>
-      </ul>
-      <div class="logout-btn">
-        <a href="landin.php">Log Out</a>
-      </div>
-    </nav>
-  </header>
-</body>
-  
+    
+    <header>
+        <div class="logo">
+            <h1>CBC ACADEMY</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="feedback.php">feedback</a></li>
+                <li><a href="game.php">Games</a></li>
+                <li><a href="about.php">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="img-logo">
         <img src="logo.jpg" alt="cbc" width="400px" height="250px">
@@ -202,6 +198,7 @@
 
     <footer id="contact">
         <p>Contact Us: <a href="mailto:cbcacademy20@gmail.com">cbcacademy20@gmail.com</a></p>
+        Tell No:0757800663
         <p>&copy; 2024 CBC ACADEMY. All rights reserved.</p>
     </footer>
 
