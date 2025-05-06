@@ -1,7 +1,7 @@
 <?php
 // Check if 'query' is set in the URL (for search)
 if (isset($_GET['query'])) {
-    $query = htmlspecialchars(trim($_GET['query'])); // Trim to remove extra spaces
+    $query = htmlspecialchars(trim($_GET['query'])); 
     
     // Connect to your database
     $conn = new mysqli('localhost', 'root', '', 'cbc');

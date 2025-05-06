@@ -22,13 +22,13 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;  /* Centers the navigation links */
+    justify-content: center; 
     margin: 0;
-    width: 100%;  /* Ensure the navigation bar takes the full width */
+    width: 100%;  
 }
 
 nav ul li {
-    margin: 0 10px; /* Adjusted margin to reduce the space between links */
+    margin: 0 10px; 
 }
 
 nav ul li a {

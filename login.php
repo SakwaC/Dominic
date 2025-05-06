@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['forgot_password_submit
                 // Send email with the reset link (you'll need to configure your email sending)
                 $reset_link = "reset-password.php?token=" . $token;
                 $email_message = "Please click the following link to reset your password: " . $reset_link;
-                // In a real application, you would use a proper email library to send this.
+                
                 // For now, we'll just display a success message.
                 $reset_message = '<div class="alert alert-success">A password reset link has been sent to your email address.</div>';
             } else {
@@ -183,8 +183,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['forgot_password_submit
             text-align: center;
             margin-top: 15px;
             font-size: 0.9rem;
-            cursor: pointer; /* Indicate it's clickable */
-            color: #007bff; /* Bootstrap primary color */
+            cursor: pointer; 
+            color: #007bff; 
             text-decoration: none;
         }
 

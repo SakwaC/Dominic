@@ -9,14 +9,14 @@
     <style>
   /* Modal overlay to dim the background */
   .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stays in place */
-    z-index: 1000; /* On top of all content */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   /* Modal content to float on the page */
@@ -30,7 +30,7 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for floating effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   }
 
   /* Close button */
@@ -89,9 +89,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px; /* Increased horizontal padding */
+  padding: 10px 30px; 
   background-color: #4CAF50;
-  flex-wrap: wrap; /* Allow items to wrap if needed */
+  flex-wrap: wrap; 
 }
 
 .nav-links {
@@ -109,11 +109,11 @@
 }
 
 .logout-btn {
-  margin-left: auto; /* Push the logout button to the far right */
+  margin-left: auto; 
 }
 
 .logout-btn a {
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap; 
   background-color: black;
   color: white;
   text-decoration: underline;
@@ -134,17 +134,21 @@
         <div class="logo">
             <h1>CBC ACADEMY</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#videos">Videos</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="feedback.php">feedback</a></li>
-                <li><a href="game.php">Games</a></li>
-                <li><a href="about.php">About</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar">
+         <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+    <li><a href="feedback.php">Feedback</a></li>
+    <li><a href="game.php">Games</a></li>
+    <li><a href="about.php">About</a></li>
+      </ul>
+  <div class="logout-btn">
+    <a href="landin.php">Log Out</a>
+  </div>
+   </nav>
+
     </header>
 
     <div class="img-logo">

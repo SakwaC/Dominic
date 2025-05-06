@@ -52,12 +52,12 @@
     background-color: #0056b3;
 }
 
-/* Optional: Add some spacing between the elements */
+/*  some spacing between the elements */
 .upload-form .form-group {
     margin-bottom: 20px;
 }
 
-/* Optional: Add styling for form error messages */
+/* styling for form error messages */
 .upload-form .error-message {
     color: #dc3545;
     font-size: 0.875rem;

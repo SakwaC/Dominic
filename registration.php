@@ -31,20 +31,20 @@ session_start();
 
         /* Increased container size */
         .container {
-            max-width: 600px; /* Increased width */
-            margin-top: 100px; /* Adjusted margin-top for spacing */
+            max-width: 600px; 
+            margin-top: 100px; 
         }
 
         /* Form input field styling */
         .form-control {
-            font-size: 1rem; /* Slightly larger font size */
+            font-size: 1rem; 
         }
 
         /* Align labels to the left */
         .form-label {
             text-align: left;
             display: block;
-            font-weight: bold; /* Make labels bold */
+            font-weight: bold; 
         }
 
         /* Styling for error messages */
